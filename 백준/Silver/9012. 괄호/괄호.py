@@ -1,13 +1,9 @@
 for _ in range(int(input())):
+    a=input()
     s=[]
-    for i in input():
-        if i=='(':
-            s.append(i)
-        else:
-            if s:
-                s.pop()
-            else:
-                print('NO')
-                break
-    else:
-        print('NO' if s else 'YES')
+    for i in a:
+        if i=='(':s.append('(')
+        elif i==')':
+            if s and s[-1]=='(':s.pop()
+            else:s.append(')')
+    print('NO' if s else 'YES')
