@@ -1,11 +1,8 @@
 from collections import deque
-
 n,k=map(int,input().split())
-
-l=deque(range(1,n+1))
-s=[]
-
-while l:
-    l.rotate(-k+1)
-    s.append(str(l.popleft()))
-print('<',', '.join(s),'>',sep='')
+q=deque(map(str,range(1,n+1)))
+o=[]
+while q:
+    q.rotate(-k+1)
+    o.append(q.popleft())
+print(f'<{", ".join(o)}>')
