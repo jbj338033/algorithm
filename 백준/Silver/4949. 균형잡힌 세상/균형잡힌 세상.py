@@ -1,17 +1,14 @@
 while 1:
     a=input()
-    l=[]
-    if a == ".":break
+    if a=='.':break
+    s=[]
     for i in a:
-        if i=='[' or i=='(':l.append(i)
-        elif i == ']':
-            if l and l[-1]=='[':l.pop()
-            else:
-                l.append(']')
-                break
+        if i=='(':s.append(1)
         elif i==')':
-            if l and l[-1]=='(':l.pop()
-            else:
-                l.append(')')
-                break
-    print('no' if l else 'yes')
+            if s and s[-1]==1:s.pop()
+            else:s.append(3)
+        elif i=='[':s.append(2)
+        elif i==']':
+            if s and s[-1]==2:s.pop()
+            else:s.append(4)
+    print('no' if s else 'yes')
