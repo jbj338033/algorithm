@@ -1,3 +1,2 @@
-n, m = map(int, input().split())
-
-print(abs(n - m))
+n,m=map(int,input().split())
+print(abs(n-m))
