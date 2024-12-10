@@ -1,3 +1,3 @@
 for _ in range(int(input())):
-  s = input()
-  print(s[0] + s[len(s)-1])
+    a=input()
+    print(a[0] + a[-1])
